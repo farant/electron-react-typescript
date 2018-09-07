@@ -125,8 +125,11 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
+    "@material-ui/core": "^3.0.2",
+    "@types/react-helmet": "^5.0.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0"
   }
