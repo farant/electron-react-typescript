@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -18,6 +18,10 @@ const createWindow = async () => {
     if (process.env.NODE_ENV !== 'production') {
         await installExtensions();
     }
+
+    ipcMain.on('getLibrary', (event, _) => {
+        event.returnValue = app.getPath('appData');
+    });
 
     win = new BrowserWindow({ width: 800, height: 600 });
 
